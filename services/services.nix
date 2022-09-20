@@ -1,6 +1,6 @@
 { config, lib, pkgs, modulesPath, ... }:
 {
-# Enable the OpenSSH daemon.
+	# Enable the OpenSSH daemon.
 	services.openssh.enable = true;
 
 	services.znc = {
@@ -14,4 +14,14 @@
 		inherit (users) User;
 		LoadModule = ["adminlog" "webadmin"];
 	};
+	
+	virtualisation.docker.enable = true;
+  	virtualisation.oci-containers = {
+    		backend = "docker";
+    			containers.irc-bridge = {
+      			image = "discordirc/discord-irc";
+      			autoStart = true;
+      			volumes = [ "${./user-configs/irc-bridge-config.json}:/config/config.json" ];
+    		};
+  	};
 }
