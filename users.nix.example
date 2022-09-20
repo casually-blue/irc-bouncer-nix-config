@@ -1,0 +1,12 @@
+  { config, lib, pkgs, modulesPath, ... }:
+  {
+    users.users.USERNAME = {
+      isNormalUser = true;
+      home = "/home/USERNAME";
+      description = "DESCRIPTION";
+      extraGroups = ["wheel" "networkmanager" "docker"];
+      openssh.authorizedKeys.keys = [ 
+      	SSH_PUBKEYS_FOR_LOGIN
+      ];
+    };
+  }

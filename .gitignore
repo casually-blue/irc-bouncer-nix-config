@@ -1,0 +1,3 @@
+users.nix
+services/user-configs/irc-bridge-config.json
+services/user-configs/users.nix

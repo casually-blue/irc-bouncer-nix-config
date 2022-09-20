@@ -1,0 +1,13 @@
+[
+  {
+    "nickname": "BRIDGE_NICKNAME_IN_IRC",
+    "server": "IRC_SERVER_FOR_BRIDGE",
+    "discordToken": "DISCORD_APPLICATION_TOKEN",
+    "channelMapping": { 
+      "#DISCORD_CHANNEL": "#IRC_CHANNEL"
+    },
+    "webhooks": {
+      "#DISCORD_CHANNEL": "WEBHOOK_URL_FOR_CHANNEL"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+# Replace text in ALL CAPS with your information
+{
+	User.USERNAME = {
+		Admin = true;
+		Pass.pasword = {
+			# generate this data with "znc --makepass"
+			Method = "sha256";
+			Hash = "ZNC_PASSWORD_HASH";
+			Salt = "ZNC_PASSWORD_SALT";
+		};
+
+		Network.NETWORK_NAME = {
+			Server = "IRC_SERVER +IRC_PORT";
+			Chan = {"#CHANNEL_NAME" = {}; };
+			Nick = "NICKNAME";
+			LoadModule = [ "nickserv" ];
+			JoinDelay = 2;
+		};
+	};
+}
